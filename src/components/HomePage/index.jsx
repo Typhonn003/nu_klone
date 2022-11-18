@@ -3,8 +3,10 @@ import "../../styles/titles.css";
 import illustration from "../../img/illustration.svg";
 import { Button } from "../Button/Default";
 
-export function HomePage() {
-    
+export function HomePage({ SetEnterFinancePage }) {
+
+  const enterPage = () => SetEnterFinancePage(true);
+
   return (
     <div className="home_page">
       <div className="container">
@@ -14,7 +16,9 @@ export function HomePage() {
           </h1>
           <p className="title1">Centralize o controle das suas finanças</p>
           <p>de forma rápida e segura</p>
-          <Button className="pink_btn">Iniciar</Button>
+          <Button className="pink_btn" onClick={enterPage}>
+            Iniciar
+          </Button>
         </div>
 
         <div className="home_page_picture">
