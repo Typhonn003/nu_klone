@@ -2,9 +2,9 @@ import "./style.css";
 import { Button } from "../../Button/Default";
 import { EmptyCard } from "./EmptyCard";
 
-export function List({ data }) {
-    
-  if (!data.length) {
+export function List({ listTransactions }) {
+  
+  if (!listTransactions.length) {
     return (
       <div className="list_container">
         <p className="title3">Resumo financeiro</p>

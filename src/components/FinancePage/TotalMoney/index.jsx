@@ -1,8 +1,8 @@
 import "./style.css";
 
-export function TotalMoney({ data }) {
-
-  const filterData = data.filter((item) => item.type !== "expense");
+export function TotalMoney({ listTransactions }) {
+  
+  const filterData = listTransactions.filter((item) => item.type !== "expense");
 
   const sum = filterData.reduce(
     (previous, current) => current.value + previous,

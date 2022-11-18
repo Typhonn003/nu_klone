@@ -6,12 +6,20 @@ import { FinancePage } from "./components/FinancePage";
 
 function App() {
 
-  /* const [listTransactions, setListTransactions] = useState([]) */
   const [enterFinancePage, SetEnterFinancePage] = useState(false);
+  const [listTransactions, setListTransactions] = useState([]);
+
+  const addTransaction = (newTransaction) => setListTransactions([...listTransactions, newTransaction]);
 
   if (enterFinancePage) {
 
-    return <FinancePage SetEnterFinancePage={SetEnterFinancePage} />;
+    return (
+      <FinancePage
+        SetEnterFinancePage={SetEnterFinancePage}
+        listTransactions={listTransactions}
+        addTransaction={addTransaction}
+      />
+    );
   } else {
     
     return <HomePage SetEnterFinancePage={SetEnterFinancePage} />;

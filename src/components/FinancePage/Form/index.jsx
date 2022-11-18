@@ -7,7 +7,7 @@ import { TextInput } from "../../Input/Text";
 import { NumberInput } from "../../Input/Number";
 import { useState } from "react";
 
-export function Form({ addData }) {
+export function Form({ addTransaction }) {
 
   const [dataDescription, setDataDescription] = useState("");
   const [dataValue, setDataValue] = useState("");
@@ -22,7 +22,7 @@ export function Form({ addData }) {
       value: Number(dataValue),
       type: dataType,
     };
-    addData(newData);
+    addTransaction(newData);
   }
 
   return (
