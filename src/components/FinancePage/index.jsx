@@ -13,9 +13,13 @@ export function FinancePage({ SetEnterFinancePage, listTransactions, addTransact
       <Header exitPage={exitPage} />
 
       <main className="container">
-        <Form addTransaction={addTransaction} />
-        <TotalMoney listTransactions={listTransactions} />
-        <List listTransactions={listTransactions} removeTransaction={removeTransaction} />
+        <section className="main_data_container">
+          <Form addTransaction={addTransaction} />
+          <TotalMoney listTransactions={listTransactions} />
+        </section>
+        <section className="main_cards_container">
+          <List listTransactions={listTransactions} removeTransaction={removeTransaction} />
+        </section>
       </main>
     </div>
   );

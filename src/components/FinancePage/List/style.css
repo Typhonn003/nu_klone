@@ -19,6 +19,12 @@
   white-space: nowrap;
 }
 
+.list_container_header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .btn_container {
   width: 100%;
 
@@ -39,5 +45,15 @@
     overflow-x: initial;
     overflow-y: initial;
     white-space: nowrap;
+  }
+
+  .list_container_header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn_container {
+    width: 60%;
   }
 }

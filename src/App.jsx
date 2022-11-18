@@ -6,7 +6,7 @@ import { FinancePage } from "./components/FinancePage";
 
 function App() {
 
-  const [enterFinancePage, SetEnterFinancePage] = useState(false);
+  const [enterFinancePage, SetEnterFinancePage] = useState(true);
   const [listTransactions, setListTransactions] = useState([]);
 
   const addTransaction = (newTransaction) => setListTransactions([...listTransactions, newTransaction]);

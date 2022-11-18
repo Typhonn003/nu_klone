@@ -8,11 +8,13 @@ export function List({ listTransactions, removeTransaction }) {
   if (!listTransactions.length) {
     return (
       <div className="list_container">
-        <p className="title3">Resumo financeiro</p>
-        <div className="btn_container">
-          <Button className="pink_btn">Todos</Button>
-          <Button className="grey_btn">Entradas</Button>
-          <Button className="grey_btn">Despesas</Button>
+        <div className="list_container_header">
+          <p className="title3">Resumo financeiro</p>
+          <div className="btn_container">
+            <Button className="pink_btn">Todos</Button>
+            <Button className="grey_btn">Entradas</Button>
+            <Button className="grey_btn">Despesas</Button>
+          </div>
         </div>
 
         <h2 className="title2">Você ainda não possui nenhum lançamento</h2>
@@ -26,11 +28,13 @@ export function List({ listTransactions, removeTransaction }) {
   } else {
     return (
       <div className="list_container">
-        <p className="title3">Resumo financeiro</p>
-        <div className="btn_container">
-          <Button className="pink_btn">Todos</Button>
-          <Button className="grey_btn">Entradas</Button>
-          <Button className="grey_btn">Despesas</Button>
+        <div className="list_container_header">
+          <p className="title3">Resumo financeiro</p>
+          <div className="btn_container">
+            <Button className="pink_btn">Todos</Button>
+            <Button className="grey_btn">Entradas</Button>
+            <Button className="grey_btn">Despesas</Button>
+          </div>
         </div>
         <div className="list_card_container">
           {listTransactions.map((item, index) => {
