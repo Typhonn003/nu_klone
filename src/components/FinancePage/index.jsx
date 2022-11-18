@@ -3,9 +3,10 @@ import { Header } from "./Header";
 import { Form } from "./Form";
 import { useState } from "react";
 import { TotalMoney } from "./TotalMoney";
+import { List } from "./List";
 
 export function FinancePage({ SetEnterFinancePage }) {
-  
+
   const exitPage = () => SetEnterFinancePage(false);
 
   const [data, setData] = useState([]);
@@ -19,6 +20,7 @@ export function FinancePage({ SetEnterFinancePage }) {
       <main className="container">
         <Form addData={addData} />
         <TotalMoney data={data} />
+        <List data={data} />
       </main>
     </div>
   );
