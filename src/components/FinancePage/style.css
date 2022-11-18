@@ -1,0 +1,15 @@
+.finance_page {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

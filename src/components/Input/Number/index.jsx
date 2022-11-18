@@ -1,15 +1,16 @@
 import "./style.css";
 
-export function TextInput({ id, value, onChange, placeholder }) {
+export function NumberInput({ id, value, onChange, placeholder }) {
     
   return (
     <input
       className="default_input"
-      type="text"
+      type="number"
       id={id}
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      min="1"
     />
   );
 }

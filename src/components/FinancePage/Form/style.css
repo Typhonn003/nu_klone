@@ -1,0 +1,58 @@
+.finance_form {
+  box-sizing: border-box;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  border: 0.125rem solid var(--color-grey200);
+  border-radius: var(--default-radius);
+
+  padding: 2rem 1rem;
+
+  background-color: var(--color-white);
+}
+
+.form_top {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form_top p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+
+  color: var(--color-grey300);
+}
+
+.form_bottom {
+  width: 100%;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.form_bottom_left {
+  box-sizing: border-box;
+
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form_bottom_right {
+  box-sizing: border-box;
+
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

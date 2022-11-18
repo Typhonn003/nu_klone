@@ -24,7 +24,7 @@
 
 .home_page_info p {
   color: var(--color-grey100);
-  max-width: 90%;
+  max-width: 70%;
   line-height: 2.5rem;
 }
 
