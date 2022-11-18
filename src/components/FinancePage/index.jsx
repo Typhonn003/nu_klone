@@ -15,7 +15,7 @@ export function FinancePage({ SetEnterFinancePage, listTransactions, addTransact
       <main className="container">
         <section className="main_data_container">
           <Form addTransaction={addTransaction} />
-          <TotalMoney listTransactions={listTransactions} />
+          {listTransactions.length > 0 ? <TotalMoney listTransactions={listTransactions} /> : null}
         </section>
         <section className="main_cards_container">
           <List listTransactions={listTransactions} removeTransaction={removeTransaction} />
