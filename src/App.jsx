@@ -10,6 +10,7 @@ function App() {
   const [listTransactions, setListTransactions] = useState([]);
 
   const addTransaction = (newTransaction) => setListTransactions([...listTransactions, newTransaction]);
+  const removeTransaction = (transaction) => setListTransactions([...listTransactions.filter((item) => item !== transaction)]);
 
   if (enterFinancePage) {
 
@@ -18,6 +19,7 @@ function App() {
         SetEnterFinancePage={SetEnterFinancePage}
         listTransactions={listTransactions}
         addTransaction={addTransaction}
+        removeTransaction={removeTransaction}
       />
     );
   } else {

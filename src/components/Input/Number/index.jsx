@@ -11,6 +11,7 @@ export function NumberInput({ id, value, onChange, placeholder }) {
       onChange={onChange}
       placeholder={placeholder}
       min="1"
+      required
     />
   );
 }

@@ -4,7 +4,7 @@ import { Form } from "./Form";
 import { TotalMoney } from "./TotalMoney";
 import { List } from "./List";
 
-export function FinancePage({ SetEnterFinancePage, listTransactions, addTransaction }) {
+export function FinancePage({ SetEnterFinancePage, listTransactions, addTransaction, removeTransaction }) {
 
   const exitPage = () => SetEnterFinancePage(false);
 
@@ -15,7 +15,7 @@ export function FinancePage({ SetEnterFinancePage, listTransactions, addTransact
       <main className="container">
         <Form addTransaction={addTransaction} />
         <TotalMoney listTransactions={listTransactions} />
-        <List listTransactions={listTransactions} />
+        <List listTransactions={listTransactions} removeTransaction={removeTransaction} />
       </main>
     </div>
   );

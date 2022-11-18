@@ -1,11 +1,12 @@
 .finance_page {
   width: 100%;
-  height: 100vh;
   background-color: var(--color-white);
 
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  margin-bottom: 1rem;
 }
 
 main {

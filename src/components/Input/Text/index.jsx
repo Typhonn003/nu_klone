@@ -10,6 +10,7 @@ export function TextInput({ id, value, onChange, placeholder }) {
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      required
     />
   );
 }
