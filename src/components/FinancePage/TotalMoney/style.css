@@ -12,20 +12,33 @@
   padding: 2rem 1rem;
 
   background-color: var(--color-white);
+
+  animation: slide-in-fwd-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .total_money_container > p {
-    font-weight: 400;
-    font-size: 0.75rem;
+  font-weight: 400;
+  font-size: 0.75rem;
 
-    color: var(--color-grey300);
+  color: var(--color-grey300);
 }
 
 .total_value {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .total_value p + p {
-    color: var(--color-brand100);
+  color: var(--color-brand100);
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
 }
