@@ -1,8 +1,8 @@
 import "./styles/reset.css";
 import "./styles/globalStyle.css";
 import { useState } from "react";
+import { LandingPage } from "./components/LandingPage";
 import { HomePage } from "./components/HomePage";
-import { FinancePage } from "./components/FinancePage";
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
   if (enterFinancePage) {
 
     return (
-      <FinancePage
+      <HomePage
         SetEnterFinancePage={SetEnterFinancePage}
         listTransactions={listTransactions}
         addTransaction={addTransaction}
@@ -24,7 +24,7 @@ function App() {
     );
   } else {
     
-    return <HomePage SetEnterFinancePage={SetEnterFinancePage} />;
+    return <LandingPage SetEnterFinancePage={SetEnterFinancePage} />;
   }
 }
 

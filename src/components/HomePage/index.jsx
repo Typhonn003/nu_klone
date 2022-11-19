@@ -1,30 +1,26 @@
 import "./style.css";
-import "../../styles/titles.css";
-import illustration from "../../img/illustration.svg";
-import { Button } from "../Button/Default";
+import { Header } from "./Header";
+import { Form } from "./Form";
+import { TotalMoney } from "./TotalMoney";
+import { List } from "./List";
 
-export function HomePage({ SetEnterFinancePage }) {
+export function HomePage({ SetEnterFinancePage, listTransactions, addTransaction, removeTransaction }) {
 
-  const enterPage = () => SetEnterFinancePage(true);
+  const exitPage = () => SetEnterFinancePage(false);
 
   return (
-    <div className="home_page">
-      <div className="container">
-        <div className="home_page_info">
-          <h1 className="title2">
-            <span>Nu</span> Kenzie
-          </h1>
-          <p className="title1">Centralize o controle das suas finanças</p>
-          <p>de forma rápida e segura</p>
-          <Button className="pink_btn" onClick={enterPage}>
-            Iniciar
-          </Button>
-        </div>
+    <div className="finance_page">
+      <Header exitPage={exitPage} />
 
-        <div className="home_page_picture">
-          <img src={illustration} alt="Imagem ilustrativa" />
-        </div>
-      </div>
+      <main className="container">
+        <section className="main_data_container">
+          <Form addTransaction={addTransaction} />
+          {listTransactions.length > 0 ? <TotalMoney listTransactions={listTransactions} /> : null}
+        </section>
+        <section className="main_cards_container">
+          <List listTransactions={listTransactions} removeTransaction={removeTransaction} />
+        </section>
+      </main>
     </div>
   );
 }
