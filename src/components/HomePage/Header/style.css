@@ -1,0 +1,22 @@
+.finance_header {
+  padding: 1rem 0;
+
+  background-color: var(--color-grey100);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container h1 {
+  color: var(--color-grey400);
+}
+
+.header-container h1 > span {
+  color: var(--color-brand100);
+}
