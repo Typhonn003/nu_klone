@@ -1,11 +1,12 @@
 import "./style.css";
 
 export function TotalMoney({ listTransactions }) {
-  
-  const filterData = listTransactions.filter((item) => item.type !== "expense");
 
-  const sum = filterData.reduce(
-    (previous, current) => current.value + previous,
+  const balance = listTransactions.reduce(
+    (previous, current) =>
+      current.type === "entry"
+        ? current.value + previous
+        : previous - current.value,
     0
   );
 
@@ -14,7 +15,10 @@ export function TotalMoney({ listTransactions }) {
       <div className="total_value">
         <p className="title3">Valor total:</p>
         <p className="title3">
-          {sum.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
+          {balance.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          })}
         </p>
       </div>
       <p>O valor se refere ao saldo</p>
