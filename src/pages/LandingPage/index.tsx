@@ -1,8 +1,8 @@
 import "./style.css";
 import "../../styles/titles.css";
 import illustration from "../../img/illustration.svg";
-import { Button } from "../../components/Button/Default/defaultButton";
 import { usePage } from "../../hooks/usePage";
+import { DefaultButton } from "../../components";
 
 export const LandingPage = () => {
   const { togglePage } = usePage();
@@ -12,13 +12,13 @@ export const LandingPage = () => {
       <div className="container">
         <div className="home_page_info">
           <h1 className="title2">
-            <span>Nu</span> Kenzie
+            <span>Nu</span> Klone
           </h1>
           <p className="title1">Centralize o controle das suas finanças</p>
           <p>de forma rápida e segura</p>
-          <Button className="pink_btn" onClick={togglePage}>
+          <DefaultButton className="pink_btn" onClick={togglePage}>
             Iniciar
-          </Button>
+          </DefaultButton>
         </div>
 
         <div className="home_page_picture">

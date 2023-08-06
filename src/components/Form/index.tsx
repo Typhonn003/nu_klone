@@ -1,12 +1,14 @@
-import "./style.css";
-import { Button } from "../../../components/Button/Default/defaultButton";
-import { Label } from "../../../components/Input/Label/label";
-import { SelectInput } from "../../../components/Input/Select/selectInput";
-import { Option } from "../../../components/Input/Option/optionInput";
-import { TextInput } from "../../../components/Input/Text/textInput";
-import { NumberInput } from "../../../components/Input/Number/numberInput";
 import { ChangeEvent, useState } from "react";
-import { usePage } from "../../../hooks/usePage";
+import { usePage } from "../../hooks/usePage";
+import "./style.css";
+import {
+  DefaultButton,
+  Label,
+  NumberInput,
+  Option,
+  SelectInput,
+  TextInput,
+} from "..";
 
 export const Form = () => {
   const { addTransaction } = usePage();
@@ -60,9 +62,9 @@ export const Form = () => {
           </SelectInput>
         </div>
       </div>
-      <Button className="pink_btn" type="submit">
+      <DefaultButton className="pink_btn" type="submit">
         Inserir valor
-      </Button>
+      </DefaultButton>
     </form>
   );
 };

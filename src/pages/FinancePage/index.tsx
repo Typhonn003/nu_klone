@@ -1,11 +1,8 @@
-import "./style.css";
-import { Header } from "./Header";
-import { Form } from "./Form";
-import { TotalMoney } from "./TotalMoney";
-import { List } from "./List";
+import { Form, Header, List, TotalMoney } from "../../components";
 import { usePage } from "../../hooks/usePage";
+import "./style.css";
 
-export const HomePage = () => {
+export const FinancePage = () => {
   const { transactionList } = usePage();
   return (
     <div className="finance_page">

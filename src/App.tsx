@@ -1,13 +1,10 @@
 import "./styles/reset.css";
 import "./styles/globalStyle.css";
-import { LandingPage } from "./pages/LandingPage";
 import { usePage } from "./hooks/usePage";
-import { HomePage } from "./pages/HomePage";
+import { FinancePage, LandingPage } from "./pages";
 
-function App() {
+export const App = () => {
   const { enterFinancePage } = usePage();
 
-  return enterFinancePage ? <HomePage /> : <LandingPage />;
-}
-
-export default App;
+  return enterFinancePage ? <FinancePage /> : <LandingPage />;
+};

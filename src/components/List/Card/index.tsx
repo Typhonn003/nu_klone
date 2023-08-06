@@ -1,6 +1,6 @@
+import { TrashButton } from "../..";
+import { usePage } from "../../../hooks/usePage";
 import "./style.css";
-import { TrashButton } from "../../../../components/Button/Trash/trashButton";
-import { usePage } from "../../../../hooks/usePage";
 
 interface ItemProp {
   item: {

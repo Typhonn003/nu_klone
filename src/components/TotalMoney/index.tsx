@@ -1,4 +1,4 @@
-import { usePage } from "../../../hooks/usePage";
+import { usePage } from "../../hooks/usePage";
 import "./style.css";
 
 export const TotalMoney = () => {

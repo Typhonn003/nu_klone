@@ -1,6 +1,6 @@
 import "./style.css";
-import { Button } from "../../../components/Button/Default/defaultButton";
-import { usePage } from "../../../hooks/usePage";
+import { DefaultButton } from "..";
+import { usePage } from "../../hooks/usePage";
 
 export const Header = () => {
   const { togglePage } = usePage();
@@ -10,11 +10,11 @@ export const Header = () => {
       <div className="container">
         <div className="header-container">
           <h1 className="title1">
-            <span>Nu</span> Kenzie
+            <span>Nu</span> Klone
           </h1>
-          <Button className="grey_btn" onClick={togglePage}>
+          <DefaultButton className="grey_btn" onClick={togglePage}>
             Inicio
-          </Button>
+          </DefaultButton>
         </div>
       </div>
     </header>

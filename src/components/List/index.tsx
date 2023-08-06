@@ -1,9 +1,9 @@
+import { useState } from "react";
+import { usePage } from "../../hooks/usePage";
 import "./style.css";
-import { Button } from "../../../components/Button/Default/defaultButton";
+import { DefaultButton } from "..";
 import { EmptyCard } from "./EmptyCard";
 import { Card } from "./Card";
-import { useState } from "react";
-import { usePage } from "../../../hooks/usePage";
 
 export const List = () => {
   const { transactionList } = usePage();
@@ -15,15 +15,14 @@ export const List = () => {
         <div className="list_container_header">
           <p className="title3">Resumo financeiro</p>
           <div className="btn_container">
-            <Button className="pink_btn">Todos</Button>
-            <Button className="grey_btn">Entradas</Button>
-            <Button className="grey_btn">Despesas</Button>
+            <DefaultButton className="pink_btn">Todos</DefaultButton>
+            <DefaultButton className="grey_btn">Entradas</DefaultButton>
+            <DefaultButton className="grey_btn">Despesas</DefaultButton>
           </div>
         </div>
 
         <h2 className="title2">Você ainda não possui nenhum lançamento</h2>
         <div className="list_empty_card_container">
-          <EmptyCard />
           <EmptyCard />
           <EmptyCard />
         </div>
@@ -35,15 +34,24 @@ export const List = () => {
         <div className="list_container_header">
           <p className="title3">Resumo financeiro</p>
           <div className="btn_container">
-            <Button className="pink_btn" onClick={() => setFilter("all")}>
+            <DefaultButton
+              className="pink_btn"
+              onClick={() => setFilter("all")}
+            >
               Todos
-            </Button>
-            <Button className="grey_btn" onClick={() => setFilter("entry")}>
+            </DefaultButton>
+            <DefaultButton
+              className="grey_btn"
+              onClick={() => setFilter("entry")}
+            >
               Entradas
-            </Button>
-            <Button className="grey_btn" onClick={() => setFilter("expense")}>
+            </DefaultButton>
+            <DefaultButton
+              className="grey_btn"
+              onClick={() => setFilter("expense")}
+            >
               Despesas
-            </Button>
+            </DefaultButton>
           </div>
         </div>
         <div className="list_card_container">
