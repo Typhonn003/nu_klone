@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# Nu Klone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este foi o primeiro projeto complexo utilizando React na Kenzie Academy Brasil, no qual nós, alunos, desenvolvemos uma página de finanças inspirada no NuBank. O projeto foi inicialmente implementado usando o método CRA, Javascript e CSS, mas eu o refatorei para o Vite e migrei todo o código para Typescript, sem, no entanto, modificar o CSS como estilização principal.
 
-Currently, two official plugins are available:
+## Instalando as dependências
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Se você estiver usando npm, execute o seguinte comando no diretório raiz do projeto:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Se você estiver usando Yarn, execute o seguinte comando no diretório raiz do projeto:
+
+```bash
+yarn
+```
+
+## Iniciando servidor
+
+Se você estiver usando npm, execute o seguinte comando no diretório raiz do projeto:
+
+```bash
+npm run dev
+```
+
+Se você estiver usando Yarn, execute o seguinte comando no diretório raiz do projeto:
+
+```bash
+yarn dev
+```
+
+```
+O servidor irá rodar em: http://localhost:5173/
+```
+
+Caso queira encerrar o servidor, aperte as teclas CTRL+C no terminal.
+
+Feito com amor por Diego de Lima Almeida, aluno da T14 da Kenzie Academy Brasil. :)
