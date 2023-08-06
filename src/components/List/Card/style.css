@@ -78,6 +78,10 @@
 }
 
 @media (min-width: 1024px) {
+  .card_container {
+    min-height: 9rem;
+  }
+
   .card_container:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
