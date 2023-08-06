@@ -1,18 +1,16 @@
 import "./style.css";
-import { TrashButton } from "../../../../components/Button/Trash";
+import { TrashButton } from "../../../../components/Button/Trash/trashButton";
 import { usePage } from "../../../../hooks/usePage";
 
-interface CardProps {
-  description: string;
-  value: number;
-  type: string;
-}
-
 interface ItemProp {
-  item: CardProps;
+  item: {
+    description: string;
+    value: number;
+    type: string;
+  };
 }
 
-export function Card({ item }: ItemProp) {
+export const Card = ({ item }: ItemProp) => {
   const { removeTransaction } = usePage();
   const { description, value, type } = item;
 
@@ -55,4 +53,4 @@ export function Card({ item }: ItemProp) {
       </div>
     );
   }
-}
+};

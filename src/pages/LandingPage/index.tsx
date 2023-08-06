@@ -1,10 +1,10 @@
 import "./style.css";
 import "../../styles/titles.css";
 import illustration from "../../img/illustration.svg";
-import { Button } from "../../components/Button/Default";
+import { Button } from "../../components/Button/Default/defaultButton";
 import { usePage } from "../../hooks/usePage";
 
-export function LandingPage() {
+export const LandingPage = () => {
   const { togglePage } = usePage();
 
   return (
@@ -27,4 +27,4 @@ export function LandingPage() {
       </div>
     </div>
   );
-}
+};

@@ -7,10 +7,10 @@ interface SelectInputProps {
   children: ReactNode;
 }
 
-export function SelectInput({ id, onChange, children }: SelectInputProps) {
+export const SelectInput = ({ id, onChange, children }: SelectInputProps) => {
   return (
     <select className="default_select" id={id} onChange={onChange}>
       {children}
     </select>
   );
-}
+};

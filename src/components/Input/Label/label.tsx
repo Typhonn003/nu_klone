@@ -6,10 +6,10 @@ interface LabelProps {
   children: ReactNode;
 }
 
-export function Label({ htmlFor, children }: LabelProps) {
+export const Label = ({ htmlFor, children }: LabelProps) => {
   return (
     <label className="default_label" htmlFor={htmlFor}>
       {children}
     </label>
   );
-}
+};

@@ -1,11 +1,11 @@
 import "./style.css";
-import { Button } from "../../../components/Button/Default";
+import { Button } from "../../../components/Button/Default/defaultButton";
 import { EmptyCard } from "./EmptyCard";
 import { Card } from "./Card";
 import { useState } from "react";
 import { usePage } from "../../../hooks/usePage";
 
-export function List() {
+export const List = () => {
   const { transactionList } = usePage();
   const [filter, setFilter] = useState("all");
 
@@ -60,4 +60,4 @@ export function List() {
       </div>
     );
   }
-}
+};

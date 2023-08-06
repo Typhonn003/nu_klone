@@ -5,6 +5,6 @@ interface OptionProps {
   children: ReactNode;
 }
 
-export function Option({ value, children }: OptionProps) {
+export const Option = ({ value, children }: OptionProps) => {
   return <option value={value}>{children}</option>;
-}
+};

@@ -1,8 +1,8 @@
 import "./style.css";
-import { Button } from "../../../components/Button/Default";
+import { Button } from "../../../components/Button/Default/defaultButton";
 import { usePage } from "../../../hooks/usePage";
 
-export function Header() {
+export const Header = () => {
   const { togglePage } = usePage();
 
   return (
@@ -19,4 +19,4 @@ export function Header() {
       </div>
     </header>
   );
-}
+};

@@ -1,14 +1,14 @@
 import "./style.css";
-import { Button } from "../../../components/Button/Default";
-import { Label } from "../../../components/Input/Label";
-import { SelectInput } from "../../../components/Input/Select";
-import { Option } from "../../../components/Input/Option";
-import { TextInput } from "../../../components/Input/Text";
-import { NumberInput } from "../../../components/Input/Number";
+import { Button } from "../../../components/Button/Default/defaultButton";
+import { Label } from "../../../components/Input/Label/label";
+import { SelectInput } from "../../../components/Input/Select/selectInput";
+import { Option } from "../../../components/Input/Option/optionInput";
+import { TextInput } from "../../../components/Input/Text/textInput";
+import { NumberInput } from "../../../components/Input/Number/numberInput";
 import { ChangeEvent, useState } from "react";
 import { usePage } from "../../../hooks/usePage";
 
-export function Form() {
+export const Form = () => {
   const { addTransaction } = usePage();
   const [dataDescription, setDataDescription] = useState("");
   const [dataValue, setDataValue] = useState("");
@@ -65,4 +65,4 @@ export function Form() {
       </Button>
     </form>
   );
-}
+};

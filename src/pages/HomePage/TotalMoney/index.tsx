@@ -1,7 +1,7 @@
 import { usePage } from "../../../hooks/usePage";
 import "./style.css";
 
-export function TotalMoney() {
+export const TotalMoney = () => {
   const { transactionList } = usePage();
 
   const balance = transactionList.reduce(
@@ -26,4 +26,4 @@ export function TotalMoney() {
       <p>O valor se refere ao saldo</p>
     </div>
   );
-}
+};

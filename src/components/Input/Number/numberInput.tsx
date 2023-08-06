@@ -1,28 +1,29 @@
 import { ChangeEvent } from "react";
 import "./style.css";
 
-interface TextInputProps {
+interface NumberInputProps {
   id: string;
-  value: string;
+  value?: string;
   onChange: (value: ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
 }
 
-export function TextInput({
+export const NumberInput = ({
   id,
   value,
   onChange,
   placeholder,
-}: TextInputProps) {
+}: NumberInputProps) => {
   return (
     <input
       className="default_input"
-      type="text"
+      type="number"
       id={id}
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      min="1"
       required
     />
   );
-}
+};

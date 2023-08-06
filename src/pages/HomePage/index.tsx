@@ -5,7 +5,7 @@ import { TotalMoney } from "./TotalMoney";
 import { List } from "./List";
 import { usePage } from "../../hooks/usePage";
 
-export function HomePage() {
+export const HomePage = () => {
   const { transactionList } = usePage();
   return (
     <div className="finance_page">
@@ -22,4 +22,4 @@ export function HomePage() {
       </main>
     </div>
   );
-}
+};

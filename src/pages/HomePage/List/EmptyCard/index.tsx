@@ -1,6 +1,6 @@
 import "./style.css";
 
-export function EmptyCard() {
+export const EmptyCard = () => {
   return (
     <div className="empty_card_container">
       <div className="empty_card_left_border"></div>
@@ -10,4 +10,4 @@ export function EmptyCard() {
       </div>
     </div>
   );
-}
+};
